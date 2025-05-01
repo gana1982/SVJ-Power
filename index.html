@@ -17,11 +17,13 @@
       color: white;
       text-align: center;
       padding: 1rem;
+      animation: fadeIn 2s ease-in-out;
     }
     main {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
+      animation: slideUp 1.5s ease-out;
     }
     h1, h2 {
       color: #00796b;
@@ -33,6 +35,26 @@
     a {
       color: #00796b;
       text-decoration: none;
+    }
+    section {
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeInSection 1s ease-in forwards;
+    }
+    section:nth-child(2) { animation-delay: 0.3s; }
+    section:nth-child(3) { animation-delay: 0.6s; }
+    section:nth-child(4) { animation-delay: 0.9s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInSection {
+      to { opacity: 1; }
     }
   </style>
 </head>
@@ -77,6 +99,9 @@
     <section>
       <h2>📍 Location & Contact</h2>
       <p>SVJ Power Solution operates across India. For product details and service inquiries, visit our <a href="https://svpowersolution.com/">official website</a>.</p>
+      <p><strong>Address:</strong> Vizag, Andhra Pradesh, India - 530046</p>
+      <p><strong>Phone:</strong> +91-8247269206</p>
+      <p><strong>Email:</strong> contact@svpowersolution.com</p>
     </section>
   </main>
 
